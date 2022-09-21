@@ -1565,6 +1565,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@parcellab/react-use-umami@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@parcellab/react-use-umami/-/react-use-umami-2.0.1.tgz#c089a08c487551aeb685821294929ddbea644858"
+  integrity sha512-C/EdfRm7OyFVmMhrrSITZ79VXLreNZEJnAdpmJ9NaTcy+Wijjf0+wHF8JA5ex+J5/Owv7gVBIj6i/+Kv04nlKA==
+
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.7.tgz#58f8217ba70069cc6a73f5d7e05e85b458c150e2"
