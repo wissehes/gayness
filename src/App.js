@@ -1,18 +1,26 @@
 import "./App.css";
 import { useState } from "react";
+import useUmami from "@parcellab/react-use-umami";
 
 function App() {
   const [slay, setSlay] = useState(0);
   const [yassified, setYassified] = useState(false);
   const [yassification, setYassication] = useState(0);
 
-  const countup = () => setSlay(slay + 1);
+  const umami = useUmami("/");
+
+  const slayclick = () => {
+    setSlay(slay + 1);
+    umami("Slay Button", "click");
+  };
   const yassify = () => {
     const slAy = getRandomSlay();
 
     setSlay(slay + slAy);
     setYassication(slAy);
     setYassified(true);
+
+    umami("Yassify Button", "click");
   };
 
   const getRandomSlay = () => Math.round(Math.random() * 10);
@@ -30,7 +38,7 @@ function App() {
         <div class="slayclass">
           {/* <button onClick={countup}>slay.</button> */}
 
-          <button class="slaybutton" onClick={countup}>
+          <button class="slaybutton" onClick={slayclick}>
             SLAY
           </button>
 
