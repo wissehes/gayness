@@ -23,33 +23,39 @@ function App() {
     umami("Yassify Button", "click");
   };
 
-  const getRandomSlay = () => Math.round(Math.random() * 10);
+  const getRandomSlay = () => Math.round(Math.random() * 10) + 5;
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1 class="maintext">
-          Did <span class="thick">you</span>{" "}
-          <p class="slay" onClick={yassify}>
+        <h1 className="maintext">
+          Did <span className="thick">you</span>{" "}
+          <p className="slay" onClick={yassify}>
             slay
           </p>
           today?
         </h1>
-        <div class="slayclass">
+        <div className="slayclass">
           {/* <button onClick={countup}>slay.</button> */}
 
-          <button class="slaybutton" onClick={slayclick}>
+          <button className="slaybutton" onClick={slayclick}>
             SLAY
           </button>
 
           <p>
-            You slayed <span class="slaycount">{slay}</span> times.
+            You've got <span className="slaycount">{slay} Slay</span> points!
           </p>
-          {yassified && (
-            <p class="yassified">YOU YASSIFIED! +{yassification} slays.</p>
-          )}
+          <p
+            className={yassified ? "yassified yassifiedvisisble" : "yassified"}
+          >
+            YOU YASSIFIED! +{yassification} slays.
+          </p>
         </div>
       </header>
+
+      <div className="slaytext">
+        <p>Hit the Slay button!🌈</p>
+      </div>
     </div>
   );
 }
